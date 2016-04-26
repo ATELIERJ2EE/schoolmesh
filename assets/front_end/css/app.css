@@ -1,0 +1,53 @@
+
+
+.navbar{
+    margin-bottom:0px;
+}
+#menu {
+    font-family: "time romain";
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 1000;
+    margin-top: 5px;
+}
+#logo{
+    height:25px;
+}
+
+#slide{
+    margin-bottom: 15px;
+
+}
+#img{
+    height: 500px;
+}
+.titre{
+    height: 80px ;
+    background-color: #ff791f;
+    margin-bottom: 15px;
+    text-align: center;
+    color:white;
+    font-size:40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+.contenu{
+    padding:15px 15px 15px;
+    min-height: 500px;
+    background-color: #f2f2f2;
+    margin-bottom: 15px;
+
+}
+#map{
+    border-right: 10px solid white;
+}
+.contact{
+    height: 400px;
+    background-color: #e3e3e3;
+    margin-bottom: 15px;
+}
+#footer{
+    height: 20px ;
+    background-color: black;
+}
