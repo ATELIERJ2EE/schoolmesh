@@ -1,3 +1,7 @@
+<?php
+include("vue/template/header.php");
+include("vue/template/menu.php");
+?>
 <!-- main content start-->
 <div class="main-content" >
 
@@ -98,7 +102,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-head pull-right">
                         <h5 class="title">Messages</h5>
-                       <!-- <h5 class="title">You have 5 Mails </h5>-->
+                        <!-- <h5 class="title">You have 5 Mails </h5>-->
                         <ul class="dropdown-list normal-list">
 
                             <li class="new"><a href="">Consulter tous vos messages</a></li>
@@ -160,14 +164,119 @@
                     <div class="col-md-12">
                         <div class="panel">
                             <header class="panel-heading">
-                                recent activities
+                                Ajout etudiant
                                     <span class="tools pull-right">
                                         <a class="fa fa-chevron-down" href="javascript:;"></a>
                                         <a class="fa fa-times" href="javascript:;"></a>
                                      </span>
                             </header>
                             <div class="panel-body">
+                                <div class="alert-danger" id="erreur_ajout_etudiant">
+                                    <i class="fa fa-exclamation-triangle"  ></i>
+                                    <label>Erreur enregistrement</label>
+                                </div>
+                                <div class="alert-success" id="succes_ajout_etudiant">
+                                    <i class="fa fa-check-circle-o"  ></i>
+                                    <label>Enregistrement effectué</label>
+                                </div>
+                                <div class="form">
+                                    <form class="cmxform form-horizontal adminex-form" id="form_ajout_etudiant">
+                                        <input type="hidden" value="Etudiant" name="typeutilisateur"/>
+                                        <div class="form-group" >
+                                            <label class="control-label col-sm-4">Nom:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" name="nom" placeholder="Entrer votre nom" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" >
+                                            <label class="control-label col-sm-4">Pr&eacute;nom:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" name="prenom" placeholder="Entrer votre prenom" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">Date de Naissance:</label>
+                                            <div class="col-sm-8">
+                                                <input type="date" class="form-control" name="date" placeholder="Entrer votre date de naissance" >
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">Nationalite:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control"  name="nationalite" placeholder="Entrer votre nationalite " >
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">Filiere:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control"  name="filiere" placeholder="Entrer votre filiere" >
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4"  >Email:</label>
+                                            <div class="col-sm-8">
+                                                <input type="email" class="form-control"  name="email" placeholder="Entrer votre email" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4"  >Annee:</label>
+                                            <div class="col-sm-8">
+                                                <input type="number" class="form-control"  name="annee" placeholder="Entrer votre annee d'etude" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4"  >Password:</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" class="form-control"  name="password" placeholder="Entrer votre mot de passe" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4" >T&eacute;l&eacute;phone:</label>
+                                            <div class="col-sm-8">
+                                                <input type="tel" maxlength=16 class="form-control" name="tel" placeholder="Entrer votre numero de  telephone" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4"  >Sexe:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control"  name="sexe" placeholder="Sexe" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4"  >Adresse:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control"  name="adresse" placeholder="Entrer votre adresse" required>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group ">
+                                            <label for="actif" class="control-label col-sm-4">Actif</label>
+                                            <div class="col-sm-8">
+                                                <input  type="radio" style="width: 20px" class="form-control" id="actif" name="actif" />
+                                            </div>
+                                            <label for="inactif" class="control-label col-sm-4">Inactif</label>
+                                            <div class="col-sm-8">
+                                                <input  type="radio" style="width: 20px" class="form-control" id="actif" name="actif" />
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-lg-offset-2 col-lg-10">
+                                                <button class="btn btn-primary" type="submit">Save</button>
+                                                <button class="btn btn-default" type="button">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,3 +286,8 @@
 
     </div>
     <!--body wrapper end-->
+
+
+<?php
+include("vue/template/footer.php");
+?>

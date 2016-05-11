@@ -1,8 +1,8 @@
 <?php
-include("header.php");
-include("menu.php");
+include("vue/template/header.php");
+include("vue/template/menu.php");
 include("content.php");
-include("footer.php");
+include("vue/template/footer.php");
 
 
 ?>

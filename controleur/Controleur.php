@@ -1,11 +1,11 @@
 <?php
 $action=@$_GET["action"];
-
+$md_utilisateur=new ModelUtilisateur();
+$md_etudiant=new ModelEtudiant();
 
 switch($action){
 
     case "login":
-        $md_utilisateur=new ModelUtilisateur();
         $reference=$md_utilisateur->login($_POST["email"],$_POST["password"]);
         if ($reference==-1){
            // session_start();
@@ -22,7 +22,8 @@ switch($action){
         break;
 
     case "dashboard":
-         if(isset($_SESSION["reference"])and $_SESSION["reference"]!=-1){
+         if(isset($_SESSION["reference"]) && $_SESSION["reference"]!=-1){
+           $donnees_utilisateur=$md_utilisateur->infos_utilisateur($_SESSION["reference"]);
              include("vue/back_end/dashboard.php");
          }
 
@@ -33,9 +34,24 @@ switch($action){
         header("Location:index.php?msg=1#authentification");
     break;
 
+
+    case "inscription":
+         $reference="SM".time();
+         $md_utilisateur->ajout_utilisateur($_POST,$reference);
+         $md_etudiant->ajoutEtudiant($_POST,$reference);
+        $_SESSION["message_insc"]="inscription effectuee avec succes";
+        header("Location:index.php?msg=2#authentification");
+        break;
+
+    case "form-utilisateur":
+        if(isset($_SESSION["reference"]) && $_SESSION["reference"]!=-1) {
+            $donnees_utilisateur = $md_utilisateur->infos_utilisateur($_SESSION["reference"]);
+            include("vue/utilisateur/ajoutUtilisateur.php");
+        }
+        break;
+
     default:
         include("vue/front_end/index.php");
-
 }
 
 

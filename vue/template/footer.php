@@ -1,6 +1,6 @@
 <!--footer section start-->
 <footer>
-    2014 &copy; AdminEx by ThemeBucket
+    2016 &copy; AdminEx by Epsiel
 </footer>
 <!--footer section end-->
 
@@ -11,6 +11,7 @@
 
 <!-- Placed js at the end of the document so the pages load faster -->
 <script src="assets/back_end/js/jquery-1.10.2.min.js"></script>
+<script src="assets/back_end/js/libs/app.js"></script>
 <script src="assets/back_end/js/jquery-ui-1.9.2.custom.min.js"></script>
 <script src="assets/back_end/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="assets/back_end/js/bootstrap.min.js"></script>

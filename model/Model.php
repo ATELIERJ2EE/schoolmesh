@@ -1,6 +1,5 @@
 <?php
-require "libs/Zebra_Database.php";
-include "config/config.php";
+
 abstract class Model{
     protected $table;
     public $db;

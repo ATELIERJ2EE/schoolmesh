@@ -148,7 +148,18 @@
         <!--formulaire pour l'inscription-->
 
         <div class="col-md-6 contenu " >
-            <form class="form-horizontal" role="form" action="traitement_contact.php?action=ajouter" method="post">
+
+            <center><?php if (@$_GET["msg"]==2) { ?>
+                    <div class="alert alert-success">
+                        <i class="fa fa-check-circle-o"  ></i>
+                        <label> <?php echo $_SESSION["message_insc"]; ?> </label>
+
+                    </div>
+
+
+                <?php }?>
+            <form class="form-horizontal" role="form" action="index.php?action=inscription" method="post">
+                <input type="hidden" value="Etudiant" name="typeutilisateur"/>
                 <div class="form-group" >
                     <label class="control-label col-sm-4">Nom:</label>
                     <div class="col-sm-8">
@@ -156,7 +167,7 @@
                     </div>
                 </div>
                 <div class="form-group" >
-                    <label class="control-label col-sm-4">Pr&eacutenom:</label>
+                    <label class="control-label col-sm-4">Pr&eacute;nom:</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" name="prenom" placeholder="Entrer votre prenom" required>
                     </div>
@@ -171,7 +182,14 @@
                 <div class="form-group">
                     <label class="control-label col-sm-4">Nationalite:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="entrep" placeholder="Entrer votre nationalite " >
+                        <input type="text" class="form-control"  name="nationalite" placeholder="Entrer votre nationalite " >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Filiere:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control"  name="filiere" placeholder="Entrer votre filiere" >
                     </div>
                 </div>
 
@@ -183,7 +201,21 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-4" >T&eacutel&eacutephone:</label>
+                    <label class="control-label col-sm-4"  >Annee:</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control"  name="annee" placeholder="Entrer votre annee d'etude" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-4"  >Password:</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control"  name="password" placeholder="Entrer votre mot de passe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-4" >T&eacute;l&eacute;phone:</label>
                     <div class="col-sm-8">
                         <input type="tel" maxlength=16 class="form-control" name="tel" placeholder="Entrer votre numero de  telephone" required>
                     </div>
@@ -192,13 +224,13 @@
                 <div class="form-group">
                     <label class="control-label col-sm-4"  >Sexe:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="email" placeholder="Sexe" required>
+                        <input type="text" class="form-control"  name="sexe" placeholder="Sexe" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-4"  >Adresse:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="email" placeholder="Entrer votre adresse" required>
+                        <input type="text" class="form-control"  name="adresse" placeholder="Entrer votre adresse" required>
                     </div>
                 </div>
 
@@ -223,7 +255,7 @@
             <center><?php if (@$_GET["msg"]==1) { ?>
                 <div class="alert alert-danger">
                     <i class="fa fa-exclamation-triangle"  ></i>
-                    <label> <?php echo $_SESSION["message"]; ?></label>
+                    <label> <?php echo @$_SESSION["message"]; ?></label>
 
                 </div>
 

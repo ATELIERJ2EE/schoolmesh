@@ -1,5 +1,5 @@
 <?php
-require("Model.php");
+//require_once("Model.php");
 class ModelUtilisateur extends Model
 {
 
@@ -8,15 +8,16 @@ class ModelUtilisateur extends Model
 
     }
 // la méthode ajout d'un utilisateur
-function ajout_utilisateur($donnees){
+function ajout_utilisateur($donnees,$reference){
     $this->db->insert(
       $this->table,
         array(
-           "Reference" =>$donnees["reference"],
-            "Pseudo" =>$donnees["pseudo"],
-            "Password" =>$donnees["passwd"],
-            "TypeUtilisateur" =>$donnees["typeutilisateur"],
-            "DateInscription" =>$donnees["dateinscription"],
+           "Reference" =>$reference,
+            "Email" =>$donnees["email"],
+            "Password" =>$donnees["password"],
+            "Type" =>$donnees["typeutilisateur"],
+            "DateInscription" =>date("d/m/y"),
+            "Actif"=>1
         )
     );
 
