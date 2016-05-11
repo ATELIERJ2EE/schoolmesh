@@ -30,11 +30,15 @@
                 <div id="navbarCollapse" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#"><i class="glyphicon glyphicon-home" style="color:#ff791f"></i> ACCUEIL</a></li>
-                        <li><a href="#"><i class="fa fa-suitcase" style = "color : #ff791f"></i>&nbsp QUI SOMMES NOUS?</a></li>
-                        <li><a href="#"><i class="fa fa-pencil-square-o" style = "color : #ff791f"></i>&nbsp INSCRIPTION</a></li>
-                        <li><a href="#"><i class = "fa fa-graduation-cap" style = "color : #ff791f"></i>&nbsp DIPLOMES ET FORMATIONS</a></li>
-                        <li><a href="#authentification"><i class=" fa fa-laptop" style = "color : #ff791f"></i> &nbsp CONNEXION</a></li>
-                        <li><a href="#"><i class=" fa fa-envelope-o" style  = "color : #ff791f"></i>&nbsp CONTACT</a></li>
+                        <li><a href="#"><i class="fa fa-suitcase" style="color : #ff791f"></i>&nbsp QUI SOMMES NOUS?</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-pencil-square-o" style="color : #ff791f"></i>&nbsp
+                                INSCRIPTION</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" style="color : #ff791f"></i>&nbsp DIPLOMES ET
+                                FORMATIONS</a></li>
+                        <li><a href="#authentification"><i class=" fa fa-laptop" style="color : #ff791f"></i> &nbsp
+                                CONNEXION</a></li>
+                        <li><a href="#"><i class=" fa fa-envelope-o" style="color : #ff791f"></i>&nbsp CONTACT</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">aa</a></li>
@@ -79,7 +83,7 @@
 
                     <div class="item">
 
-                        <img src="assets/front_end/slide/foto2.jpg" alt="Second Slide" id = "img">
+                        <img src="assets/front_end/slide/foto2.jpg" alt="Second Slide" id="img">
 
                         <div class="carousel-caption">
 
@@ -122,7 +126,8 @@
 
     <div class="row">
         <div class="col-md-12 titre">
-            <i class="fa fa-home"></i>&nbsp;qui sommes nous?</div>
+            <i class="fa fa-home"></i>&nbsp;qui sommes nous?
+        </div>
     </div>
 
     <!--contenu_quisommesnou-->
@@ -135,8 +140,8 @@
 
     <div class="row">
         <div class="col-md-12 titre" id="authentification">
-            <i class=" fa fa-pencil-square-o"></i>&nbsp; INSCRIPTION</div>
-
+            <i class=" fa fa-pencil-square-o"></i>&nbsp; INSCRIPTION
+        </div>
 
 
     </div>
@@ -147,102 +152,113 @@
 
         <!--formulaire pour l'inscription-->
 
-        <div class="col-md-6 contenu " >
+        <div class="col-md-6 contenu ">
 
-            <center><?php if (@$_GET["msg"]==2) { ?>
+            <center><?php if (@$_GET["msg"] == 2) { ?>
                     <div class="alert alert-success">
-                        <i class="fa fa-check-circle-o"  ></i>
+                        <i class="fa fa-check-circle-o"></i>
                         <label> <?php echo $_SESSION["message_insc"]; ?> </label>
 
                     </div>
 
 
-                <?php }?>
-            <form class="form-horizontal" role="form" action="index.php?action=inscription" method="post">
-                <input type="hidden" value="Etudiant" name="typeutilisateur"/>
-                <div class="form-group" >
-                    <label class="control-label col-sm-4">Nom:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" name="nom" placeholder="Entrer votre nom" required>
+                <?php } ?>
+                <form class="form-horizontal" role="form" action="index.php?action=inscription" method="post">
+                    <input type="hidden" value="Etudiant" name="typeutilisateur"/>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Nom:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nom" placeholder="Entrer votre nom" required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group" >
-                    <label class="control-label col-sm-4">Pr&eacute;nom:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" name="prenom" placeholder="Entrer votre prenom" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Pr&eacute;nom:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="prenom" placeholder="Entrer votre prenom"
+                                   required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-4">Date de Naissance:</label>
-                    <div class="col-sm-8">
-                        <input type="date" class="form-control" name="date" placeholder="Entrer votre date de naissance" >
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Date de Naissance:</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" name="date"
+                                   placeholder="Entrer votre date de naissance">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4">Nationalite:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="nationalite" placeholder="Entrer votre nationalite " >
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Nationalite:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nationalite"
+                                   placeholder="Entrer votre nationalite ">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4">Filiere:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="filiere" placeholder="Entrer votre filiere" >
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Filiere:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="filiere" placeholder="Entrer votre filiere">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4"  >Email:</label>
-                    <div class="col-sm-8">
-                        <input type="email" class="form-control"  name="email" placeholder="Entrer votre email" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Email:</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" name="email" placeholder="Entrer votre email"
+                                   required>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4"  >Annee:</label>
-                    <div class="col-sm-8">
-                        <input type="number" class="form-control"  name="annee" placeholder="Entrer votre annee d'etude" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Annee:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="annee"
+                                   placeholder="Entrer votre annee d'etude" required>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4"  >Password:</label>
-                    <div class="col-sm-8">
-                        <input type="password" class="form-control"  name="password" placeholder="Entrer votre mot de passe" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Password:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" name="password"
+                                   placeholder="Entrer votre mot de passe" required>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4" >T&eacute;l&eacute;phone:</label>
-                    <div class="col-sm-8">
-                        <input type="tel" maxlength=16 class="form-control" name="tel" placeholder="Entrer votre numero de  telephone" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">T&eacute;l&eacute;phone:</label>
+                        <div class="col-sm-8">
+                            <input type="tel" maxlength=16 class="form-control" name="tel"
+                                   placeholder="Entrer votre numero de  telephone" required>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4"  >Sexe:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="sexe" placeholder="Sexe" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Sexe:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="sexe" placeholder="Sexe" required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-4"  >Adresse:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control"  name="adresse" placeholder="Entrer votre adresse" required>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Adresse:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="adresse" placeholder="Entrer votre adresse"
+                                   required>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-4" ></label>
-                    <div class="col-sm-8">
-                        <center> <button type="submit" class="btn btn-success" >ENVOYER</button>&nbsp;&nbsp;
-                            <button type="reset" class="btn btn-danger">ANNULER</button></center>
-                        <br>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4"></label>
+                        <div class="col-sm-8">
+                            <center>
+                                <button type="submit" class="btn btn-success">ENVOYER</button>
+                                &nbsp;&nbsp;
+                                <button type="reset" class="btn btn-danger">ANNULER</button>
+                            </center>
+                            <br>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
 
         </div>
 
@@ -250,58 +266,63 @@
 
 
         <div class="col-md-6 contenu" style="border-left: 10px solid white">
-        <center><img class ="img-circle" src="assets/front_end/slide/login.gif">   </center>
+            <center><img class="img-circle" src="assets/front_end/slide/login.gif"></center>
 
-            <center><?php if (@$_GET["msg"]==1) { ?>
-                <div class="alert alert-danger">
-                    <i class="fa fa-exclamation-triangle"  ></i>
-                    <label> <?php echo @$_SESSION["message"]; ?></label>
+            <center><?php if (@$_GET["msg"] == 1) { ?>
+                    <div class="alert alert-danger">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <label> <?php echo @$_SESSION["message"]; ?></label>
 
-                </div>
+                    </div>
 
 
-                <?php }?>
+                <?php } ?>
             </center>
-            <form class="form-horizontal" role="form"  action="index.php?action=login" method="post">
-                <div class="form-group" >
+            <form class="form-horizontal" role="form" action="index.php?action=login" method="post">
+                <div class="form-group">
                     <label class="control-label col-sm-4">Email:</label>
                     <div class="col-sm-8">
                         <input type="email" class="form-control" name="email" placeholder="Entrer votre email" required>
                     </div>
                 </div>
-                <div class="form-group" >
+                <div class="form-group">
                     <label class="control-label col-sm-4">Password:</label>
                     <div class="col-sm-8">
-                        <input type="password" class="form-control" name="password" placeholder="Entrer votre mot de passe" required>
+                        <input type="password" class="form-control" name="password"
+                               placeholder="Entrer votre mot de passe" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-4" ></label>
+                    <label class="control-label col-sm-4"></label>
                     <div class="col-sm-8">
-                        <center> <button type="submit" class="btn btn-success" >ENVOYER</button>&nbsp;&nbsp;
-                            <button type="reset" class="btn btn-danger">ANNULER</button></center>
+                        <center>
+                            <button type="submit" class="btn btn-success">ENVOYER</button>
+                            &nbsp;&nbsp;
+                            <button type="reset" class="btn btn-danger">ANNULER</button>
+                        </center>
                         <br>
                     </div>
                 </div>
             </form>
-            </div>
         </div>
-
     </div>
 
+</div>
 
-    <div class="row">
-        <div class="col-md-12 titre">
-            <i class=" fa fa-phone-square "></i>&nbsp;nous-contacter</div>
+
+<div class="row">
+    <div class="col-md-12 titre">
+        <i class=" fa fa-phone-square "></i>&nbsp;nous-contacter
     </div>
+</div>
 
-    <div class="row">
+<div class="row">
 
-        <div class="col-md-6 contact" id="map"></div>
-        <div class="col-md-6 contact"></div>
-    </div>
+    <div class="col-md-6 contact" id="map"></div>
+    <div class="col-md-6 contact"></div>
+</div>
 
-    <?php include("footer.php"); ?>
+<?php include("footer.php"); ?>
 
 </div>
 </body>
