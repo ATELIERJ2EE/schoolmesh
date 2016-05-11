@@ -153,112 +153,112 @@
         <!--formulaire pour l'inscription-->
 
         <div class="col-md-6 contenu ">
+            <!--Note: <center> tag removed here!-->
+            <?php if (@$_GET["msg"] == 2) { ?>
+                <div class="alert alert-success">
+                    <i class="fa fa-check-circle-o"></i>
+                    <label> <?php echo $_SESSION["message_insc"]; ?> </label>
 
-            <center><?php if (@$_GET["msg"] == 2) { ?>
-                    <div class="alert alert-success">
-                        <i class="fa fa-check-circle-o"></i>
-                        <label> <?php echo $_SESSION["message_insc"]; ?> </label>
-
-                    </div>
+                </div>
 
 
-                <?php } ?>
-                <form class="form-horizontal" role="form" action="index.php?action=inscription" method="post">
-                    <input type="hidden" value="Etudiant" name="typeutilisateur"/>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Nom:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="nom" placeholder="Entrer votre nom" required>
-                        </div>
+            <?php } ?>
+            <form class="form-horizontal" role="form" action="index.php?action=inscription" method="post">
+                <input type="hidden" value="Etudiant" name="typeutilisateur"/>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Nom:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="nom" placeholder="Entrer votre nom" required>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Pr&eacute;nom:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="prenom" placeholder="Entrer votre prenom"
-                                   required>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Pr&eacute;nom:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="prenom" placeholder="Entrer votre prenom"
+                               required>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Date de Naissance:</label>
-                        <div class="col-sm-8">
-                            <input type="date" class="form-control" name="date"
-                                   placeholder="Entrer votre date de naissance">
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Date de Naissance:</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" name="date"
+                               placeholder="Entrer votre date de naissance">
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Nationalite:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="nationalite"
-                                   placeholder="Entrer votre nationalite ">
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Nationalite:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="nationalite"
+                               placeholder="Entrer votre nationalite ">
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Filiere:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="filiere" placeholder="Entrer votre filiere">
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Filiere:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="filiere" placeholder="Entrer votre filiere">
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Email:</label>
-                        <div class="col-sm-8">
-                            <input type="email" class="form-control" name="email" placeholder="Entrer votre email"
-                                   required>
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Email:</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" name="email" placeholder="Entrer votre email"
+                               required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Annee:</label>
-                        <div class="col-sm-8">
-                            <input type="number" class="form-control" name="annee"
-                                   placeholder="Entrer votre annee d'etude" required>
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Annee:</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" name="annee"
+                               placeholder="Entrer votre annee d'etude" required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Password:</label>
-                        <div class="col-sm-8">
-                            <input type="password" class="form-control" name="password"
-                                   placeholder="Entrer votre mot de passe" required>
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Password:</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" name="password"
+                               placeholder="Entrer votre mot de passe" required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">T&eacute;l&eacute;phone:</label>
-                        <div class="col-sm-8">
-                            <input type="tel" maxlength=16 class="form-control" name="tel"
-                                   placeholder="Entrer votre numero de  telephone" required>
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">T&eacute;l&eacute;phone:</label>
+                    <div class="col-sm-8">
+                        <input type="tel" maxlength=16 class="form-control" name="tel"
+                               placeholder="Entrer votre numero de  telephone" required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Sexe:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="sexe" placeholder="Sexe" required>
-                        </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Sexe:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="sexe" placeholder="Sexe" required>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Adresse:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="adresse" placeholder="Entrer votre adresse"
-                                   required>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Adresse:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="adresse" placeholder="Entrer votre adresse"
+                               required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4"></label>
-                        <div class="col-sm-8">
-                            <center>
-                                <button type="submit" class="btn btn-success">ENVOYER</button>
-                                &nbsp;&nbsp;
-                                <button type="reset" class="btn btn-danger">ANNULER</button>
-                            </center>
-                            <br>
+                <div class="form-group">
+                    <label class="control-label col-sm-4"></label>
+                    <div class="col-sm-8">
+                        <div align="center">
+                            <button type="submit" class="btn btn-success">ENVOYER</button>
+                            &nbsp;&nbsp;
+                            <button type="reset" class="btn btn-danger">ANNULER</button>
                         </div>
+                        <br>
                     </div>
-                </form>
+                </div>
+            </form>
 
         </div>
 
@@ -266,9 +266,9 @@
 
 
         <div class="col-md-6 contenu" style="border-left: 10px solid white">
-            <center><img class="img-circle" src="assets/front_end/slide/login.gif"></center>
+            <div align="center"><img class="img-circle" src="assets/front_end/slide/login.gif"></div>
 
-            <center><?php if (@$_GET["msg"] == 1) { ?>
+            <div align="center"><?php if (@$_GET["msg"] == 1) { ?>
                     <div class="alert alert-danger">
                         <i class="fa fa-exclamation-triangle"></i>
                         <label> <?php echo @$_SESSION["message"]; ?></label>
@@ -277,7 +277,7 @@
 
 
                 <?php } ?>
-            </center>
+            </div>
             <form class="form-horizontal" role="form" action="index.php?action=login" method="post">
                 <div class="form-group">
                     <label class="control-label col-sm-4">Email:</label>
@@ -295,11 +295,11 @@
                 <div class="form-group">
                     <label class="control-label col-sm-4"></label>
                     <div class="col-sm-8">
-                        <center>
+                        <div align="center">
                             <button type="submit" class="btn btn-success">ENVOYER</button>
                             &nbsp;&nbsp;
                             <button type="reset" class="btn btn-danger">ANNULER</button>
-                        </center>
+                        </div>
                         <br>
                     </div>
                 </div>
